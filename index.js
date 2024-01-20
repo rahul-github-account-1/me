@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 const path = require('path');
 const { ConnectionPool } = require('mssql');
-const port = 8080;
+const port = process.env.PORT || 3000;
 
 // Database configuration
 const config = {
@@ -77,6 +77,6 @@ app.get('/task3', async(req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('running on port 8080');
+    console.log('running on port ',port);
 })
 
