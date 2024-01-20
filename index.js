@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 const path = require('path');
 const { ConnectionPool } = require('mssql');
-const port = 3000;
+const port = 8080;
 
 // Database configuration
 const config = {
